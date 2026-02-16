@@ -1,29 +1,53 @@
 <header class="header" id="header">
     <nav class="nav container">
-      <a href="#" class="nav__logo">Mahendran <span>M</span></a>
+      <a href="#" class="nav__logo">
+        <span class="nav__logo-icon">M</span>
+        <span class="nav__logo-text">Mahendran</span>
+      </a>
 
       <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#home" class="nav__link active-link" (click)="close()">Home</a>
+              <a href="#home" class="nav__link active-link" (click)="close()">
+                <span class="nav__link-text">Home</span>
+              </a>
             </li>
             <li class="nav__item">
-              <a href="#about" class="nav__link" (click)="close()">About</a>
+              <a href="#about" class="nav__link" (click)="close()">
+                <span class="nav__link-text">About</span>
+              </a>
             </li>
             <li class="nav__item">
-              <a href="#services" class="nav__link" (click)="close()">Services</a>
+              <a href="#experience" class="nav__link" (click)="close()">
+                <span class="nav__link-text">Experience</span>
+              </a>
             </li>
             <li class="nav__item">
-              <a href="#projects" class="nav__link" (click)="close()">Projects</a>
+              <a href="#skills" class="nav__link" (click)="close()">
+                <span class="nav__link-text">Skills</span>
+              </a>
             </li>
             <li class="nav__item">
-              <a href="#contact" class="nav__link" (click)="close()">Contact</a>
+              <a href="#projects" class="nav__link" (click)="close()">
+                <span class="nav__link-text">Projects</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link" (click)="close()">
+                <span class="nav__link-text">Contact</span>
+              </a>
             </li>
           </ul>
           <div class="nav__close" id="nav-close" (click)="close()">
             <i class="ri-close-line"></i>
           </div>
       </div>
+
+      <a href="assets/resume/MahendranM_Resume.pdf" download class="nav__resume-btn">
+        <i class="ri-download-line"></i>
+        <span>Resume</span>
+      </a>
+
       <div class="nav__toggle" id="nav-toggle" (click)="toggle()">
         <i class="ri-menu-line"></i>
       </div>
@@ -34,68 +58,82 @@
 <main class="main">
    <!--==================== HOME ====================-->
    <section class="home section" id="home">
+      <div class="home__gradient-orb home__gradient-orb--1"></div>
+      <div class="home__gradient-orb home__gradient-orb--2"></div>
+      <div class="home__gradient-orb home__gradient-orb--3"></div>
+      <div class="home__grid-bg"></div>
+
       <div class="container home__container grid">
         <div class="home__content">
           <div class="home__data">
+            <div class="home__badge">
+              <span class="home__badge-dot"></span>
+              <span class="home__badge-text">Available for opportunities</span>
+            </div>
+
             <h3 class="home__subtitle">
-                Hello ,<span>I'm</span>
+                Hello, <span>I'm</span>
             </h3>
-            <h1  class="home__title">
+            <h1 class="home__title">
                 Mahendran M
             </h1>
-            <h3 class="home__education">Frontend Developer</h3>
+            <div class="home__education-wrapper">
+              <h3 class="home__education">
+                <span class="typing-text" id="typing-text"></span>
+                <span class="cursor">|</span>
+              </h3>
+            </div>
             <p class="home__description">
-              With knowledge in web development and 
-              design, I offer the best projects resulting 
-              in quality work.
+              Frontend Engineer with <strong>{{experienceYears}} years</strong> of experience building
+              scalable React.js applications. Specialized in AI-powered interfaces,
+              real-time communication systems, and enterprise solutions.
             </p>
 
-            <a href="#contact" class="btn"> Let's Talk !!!</a>
+            <div class="home__buttons">
+              <a href="#contact" class="btn btn--primary">
+                <i class="ri-send-plane-line"></i> Let's Talk
+              </a>
+              <a href="#projects" class="btn btn--glass">
+                <i class="ri-folder-line"></i> View Projects
+              </a>
+            </div>
           </div>
           <div class="home__social">
-              <a href="https://github.com/Mahendranjs" target="_blank" class="home__social-link">
+              <a href="https://github.com/MahendranJS" target="_blank" class="home__social-link" title="GitHub">
                 <i class="ri-github-fill"></i>
               </a>
-              <a href="https://www.instagram.com/mahe_7_/" target="_blank" class="home__social-link">
-                <i class="ri-instagram-fill"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/mahendran-m-654978209/" target="_blank" class="home__social-link">
+              <a href="https://linkedin.com/in/Mahendran" target="_blank" class="home__social-link" title="LinkedIn">
                 <i class="ri-linkedin-box-fill"></i>
+              </a>
+              <a href="mailto:mmahendran.2205@gmail.com" class="home__social-link" title="Email">
+                <i class="ri-mail-line"></i>
+              </a>
+              <a href="tel:+919600419881" class="home__social-link" title="Phone">
+                <i class="ri-phone-line"></i>
               </a>
           </div>
 
         </div>
         <div class="home__image">
+          <div class="home__image-ring"></div>
+          <div class="home__image-glow"></div>
           <svg class="home__blob" viewBox="0 0 550 591" xmlns="http://www.w3.org/2000/svg">
             <mask id="maskBlob" mask-type="alpha">
-               <path d="M263 47.1782C270.426 42.891 279.574 42.891 287 47.1782L501.157 
-               170.822C508.583 175.109 513.157 183.032 513.157 191.606V438.894C513.157 
-               447.468 508.583 455.391 501.157 459.678L287 583.322C279.574 587.609 270.426 
-               587.609 263 583.322L48.843 459.678C41.4174 455.391 36.843 447.468 36.843 
+               <path d="M263 47.1782C270.426 42.891 279.574 42.891 287 47.1782L501.157
+               170.822C508.583 175.109 513.157 183.032 513.157 191.606V438.894C513.157
+               447.468 508.583 455.391 501.157 459.678L287 583.322C279.574 587.609 270.426
+               587.609 263 583.322L48.843 459.678C41.4174 455.391 36.843 447.468 36.843
                438.894V191.606C36.843 183.032 41.4174 175.109 48.843 170.822L263 47.1782Z"/>
             </mask>
             <g mask="url(#maskBlob)">
-               <path d="M263 47.1782C270.426 42.891 279.574 42.891 287 47.1782L501.157 
-               170.822C508.583 175.109 513.157 183.032 513.157 191.606V438.894C513.157 
-               447.468 508.583 455.391 501.157 459.678L287 583.322C279.574 587.609 270.426 
-               587.609 263 583.322L48.843 459.678C41.4174 455.391 36.843 447.468 36.843 
-               438.894V191.606C36.843 183.032 41.4174 175.109 48.843 170.822L263 47.1782Z"/>
-         
                <rect x="37" width="476" height="630" fill="url(#pattern0)"/>
             </g>
-         
-            <rect x="37" width="476" height="300" fill="url(#pattern1)"/>
-         
+
             <defs>
                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                  <use href="#imageBlob" transform="matrix(0.00143057 0 0 0.00108108 0.0404062 0)"/>
+                  <use href="#imageBlob" transform="matrix(0.00156 0 0 0.001 0 -0.05)"/>
                </pattern>
-         
-               <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
-                  <use href="#imageBlob" transform="matrix(0.00143057 0 0 0.00226984 0.0404062 0)"/>
-               </pattern>
-         
-               <!-- Insert your profile (recommended size: 640 x 940) -->
+
                <image class="home__img" id="imageBlob" width="640" height="1025" href="assets/img/Mahendran-1.png"/>
             </defs>
          </svg>
@@ -108,47 +146,67 @@
     <div class="container about__container grid">
         <div class="about__data">
           <h3 class="section__subtitle">
+            <span class="section__subtitle-icon"><i class="ri-user-line"></i></span>
             <span>Introduction</span>
           </h3>
           <h2 class="section__title">
               About Me
           </h2>
           <p class="about__description">
-            Angular Developer with 2 Year's industry experience in Angular and currently working with agile involved with Software development for the several self-motivated quick learner with a passion for exploring new technologies and continuous improvements.
+            Frontend Engineer with <strong>{{experienceYears}} years</strong> of experience at <strong>SBNA Software Solutions</strong>,
+            specializing in building scalable React.js applications with modern technologies like TypeScript,
+            Redux Toolkit, and React Query.
           </p>
-          <a href="#contact" class="btn">Contact Me</a>
+          <p class="about__description">
+            I've developed AI-powered contact center interfaces handling <strong>1,000+ concurrent agent interactions</strong>,
+            integrated Azure AI for automated knowledge search reducing manual resolution time by <strong>35%</strong>,
+            and optimized frontend performance reducing unnecessary re-renders by <strong>25%</strong>.
+          </p>
+
+          <div class="about__info">
+            <div class="about__info-item">
+              <div class="about__info-icon"><i class="ri-calendar-check-line"></i></div>
+              <h3 class="about__info-title">{{experienceYears}}</h3>
+              <span class="about__info-name">Years<br>Experience</span>
+            </div>
+            <div class="about__info-item">
+              <div class="about__info-icon"><i class="ri-code-box-line"></i></div>
+              <h3 class="about__info-title">10+</h3>
+              <span class="about__info-name">Projects<br>Completed</span>
+            </div>
+            <div class="about__info-item">
+              <div class="about__info-icon"><i class="ri-graduation-cap-line"></i></div>
+              <h3 class="about__info-title">B.E.</h3>
+              <span class="about__info-name">Computer<br>Science</span>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn--primary">Contact Me</a>
         </div>
         <div class="about__image">
           <svg class="about__blob" viewBox="0 0 550 592" fill="none" xmlns="http://www.w3.org/2000/svg">
             <mask id="maskBorder" mask-type="alpha">
-               <path d="M263 48.1782C270.426 43.891 279.574 43.891 287 48.1782L501.157 
-               171.822C508.583 176.109 513.157 184.032 513.157 192.606V439.894C513.157 
-               448.468 508.583 456.391 501.157 460.678L287 584.322C279.574 588.609 
-               270.426 588.609 263 584.322L48.843 460.678C41.4174 456.391 36.843 448.468 36.843 
+               <path d="M263 48.1782C270.426 43.891 279.574 43.891 287 48.1782L501.157
+               171.822C508.583 176.109 513.157 184.032 513.157 192.606V439.894C513.157
+               448.468 508.583 456.391 501.157 460.678L287 584.322C279.574 588.609
+               270.426 588.609 263 584.322L48.843 460.678C41.4174 456.391 36.843 448.468 36.843
                439.894V192.606C36.843 184.032 41.4174 176.109 48.843 171.822L263 48.1782Z" fill="black"/>
             </mask>
             <g mask="url(#maskBorder)">
                <rect x="37" width="476" height="630" fill="url(#pattern2)"/>
-               
-               <path d="M285 51.6423L499.157 175.286C505.345 178.859 509.157 185.461 509.157 
-               192.606V439.894C509.157 447.039 505.345 453.641 499.157 457.214L285 
-               580.858C278.812 584.43 271.188 584.43 265 580.858L50.843 457.214C44.655 453.641 
-               40.843 447.039 40.843 439.894V192.606C40.843 185.461 44.655 178.859 50.843 
+
+               <path d="M285 51.6423L499.157 175.286C505.345 178.859 509.157 185.461 509.157
+               192.606V439.894C509.157 447.039 505.345 453.641 499.157 457.214L285
+               580.858C278.812 584.43 271.188 584.43 265 580.858L50.843 457.214C44.655 453.641
+               40.843 447.039 40.843 439.894V192.606C40.843 185.461 44.655 178.859 50.843
                175.286L265 51.6423C271.188 48.0697 278.812 48.0696 285 51.6423Z" stroke="black" stroke-width="10"/>
             </g>
-         
-            <rect x="37" width="476" height="300" fill="url(#pattern3)"/>
-         
+
             <defs>
                <pattern id="pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
-                  <use href="#imageBorder" transform="matrix(0.00143057 0 0 0.00108108 0.0404062 0)"/>
+                  <use href="#imageBorder" transform="matrix(0.00156 0 0 0.001 0 -0.05)"/>
                </pattern>
-         
-               <pattern id="pattern3" patternContentUnits="objectBoundingBox" width="1" height="1">
-                  <use href="#imageBorder" transform="matrix(0.00143057 0 0 0.00226984 0.0404062 0)"/>
-               </pattern>
-         
-               <!-- Insert your profile (recommended size: 640 x 940) -->
+
                <image class="about__img" id="imageBorder" width="640" height="1020" href="assets/img/Mahendran-1.png"/>
             </defs>
          </svg>
@@ -156,134 +214,423 @@
     </div>
    </section>
 
-   <!--==================== SKILLS ====================-->
-   <section class="skills section">
-      <div class="skills__container container grid">
-        <div class="skills__data">
-          <h3 class="section__subtitle">
-             <span>Skills</span>
-          </h3>
-          <h2 class="section__title">My Skills</h2>
-          <p class="skills__description">
-            See fully what skills I have and perform, 
-            to develop the projects for you.
-          </p>
+   <!--==================== EXPERIENCE ====================-->
+   <section class="experience section" id="experience">
+      <h3 class="section__subtitle">
+        <span class="section__subtitle-icon"><i class="ri-briefcase-line"></i></span>
+        <span>Career Journey</span>
+      </h3>
+      <h2 class="section__title">
+        Work Experience
+      </h2>
+      <div class="experience__container container">
+        <div class="experience__timeline">
 
-          <a href="#projects" class="btn">See Projects</a>
-        </div>
-        <div class="skills__content">
-            <ol class="skills__group">
-              <li class="skills__item">HTML & CSS</li>
-              <li class="skills__item">Javascript & JQuery</li>
-              <li class="skills__item">Bootstrap</li>
-              <li class="skills__item">Node JS (Express JS)</li>
-            </ol>
-            <ol class="skills__group" start="5">
-              <li class="skills__item">Angular</li>
-              <li class="skills__item">Rxjs</li>
-              <li class="skills__item">Twilio</li>
-              <li class="skills__item">Web Socket</li>
-            </ol>
+          <div class="experience__item">
+            <div class="experience__icon">
+              <i class="ri-code-s-slash-line"></i>
+            </div>
+            <div class="experience__content">
+              <div class="experience__header">
+                <h3 class="experience__title">Frontend Engineer</h3>
+                <span class="experience__company">SBNA Software Solutions</span>
+              </div>
+              <div class="experience__meta">
+                <span class="experience__date">
+                  <i class="ri-calendar-line"></i> Aug 2021 - Present
+                </span>
+                <span class="experience__location">
+                  <i class="ri-map-pin-line"></i> Coimbatore, TN, India
+                </span>
+              </div>
+              <ul class="experience__list">
+                <li>Collaborated with cross-functional teams (Product, QA, Backend, DevOps) to refine requirements and deliver production-ready React applications</li>
+                <li>Engineered scalable React.js frontends using Hooks, TypeScript, Redux Toolkit, Zustand, and React Query, improving UI responsiveness and maintainability by <strong>30%</strong></li>
+                <li>Built AI-powered Agent Contact Center interface with multi-channel chat, voice, and video using sip.js + FreeSWITCH, enabling <strong>1,000+ concurrent agent interactions</strong></li>
+                <li>Integrated Azure AI Agent for automated knowledge search, intent prediction, and workflow guidance, reducing manual resolution time by <strong>35%</strong></li>
+                <li>Developed backend APIs using Node.js and Express.js to support AI workflows, form automation, and contact center features</li>
+                <li>Implemented secure REST endpoints with JWT/Firebase Auth, improving application security for React and React Native clients</li>
+                <li>Optimized frontend performance through memoization, virtualization, lazy loading, and code splitting, reducing unnecessary re-renders by <strong>25%</strong></li>
+              </ul>
+              <div class="experience__tags">
+                <span class="experience__tag">React.js</span>
+                <span class="experience__tag">TypeScript</span>
+                <span class="experience__tag">Redux Toolkit</span>
+                <span class="experience__tag">Node.js</span>
+                <span class="experience__tag">Azure AI</span>
+                <span class="experience__tag">WebRTC</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="experience__item experience__item--education">
+            <div class="experience__icon">
+              <i class="ri-graduation-cap-line"></i>
+            </div>
+            <div class="experience__content">
+              <div class="experience__header">
+                <h3 class="experience__title">Bachelor of Engineering</h3>
+                <span class="experience__company">Government College of Engineering</span>
+              </div>
+              <div class="experience__meta">
+                <span class="experience__date">
+                  <i class="ri-calendar-line"></i> Graduated May 2021
+                </span>
+                <span class="experience__location">
+                  <i class="ri-map-pin-line"></i> Theni, TN, India
+                </span>
+              </div>
+              <p class="experience__description">
+                Computer Science | GPA: <strong>7.4/10.00</strong>
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
    </section>
 
-   <!--==================== SERVICES ====================-->
-   <section class="services section" id="services">
-        <div class=""></div>
-        <h3 class="section__subtitle">
-          <span>Services</span>
-        </h3>
-        <h2 class="section__title">
-           What I Do
-        </h2>
-        <div class="services__container container grid">
-            <article class="services__card">
-              <i class="ri-layout-3-line services__icon"></i>
-                <h2 class="services__title">Web Developer</h2>
-                <p class="services__description">
-                  Development of custom web pages. 
-                  Using current technologies and 
-                  libraries of the labor field.
-                </p>
-            </article>
-
-            <article class="services__card">
-              <i class="ri-smartphone-line services__icon"></i>
-              <h2 class="services__title ">Mobile App Development</h2>
-              <p class="services__description">
-                  An responsible for translating code into user-friendly applications.
-                  collaborate with internal teams to develop functional mobile applications while working in a fast-paced environment.
-                  keep up to date with terminology,
-              </p>
-          </article>
-
-          <article class="services__card">
-            <i class="ri-device-line services__icon"></i>
-            <h2 class="services__title">Cross Platform Development</h2>
-            <p class="services__description">
-              Deliver fully functional, cross-platform, and well tested mobile applications developed according to quality standards. Analyze, Design, Implement, Integrate and Document functional requirements in new/existing solutions. Working closely with team members to achieve project & organizational objectives.
-            </p>
-        </article>
+   <!--==================== SKILLS ====================-->
+   <section class="skills section" id="skills">
+      <div class="skills__container container">
+        <div class="skills__data">
+          <h3 class="section__subtitle">
+            <span class="section__subtitle-icon"><i class="ri-tools-line"></i></span>
+            <span>Expertise</span>
+          </h3>
+          <h2 class="section__title">Technical Skills</h2>
+          <p class="skills__description">
+            Comprehensive skill set spanning frontend development,
+            backend APIs, real-time systems, and AI integrations.
+          </p>
         </div>
+
+        <div class="skills__content-wrapper">
+          <!-- Frontend Skills -->
+          <div class="skills__category" data-accent="blue">
+            <div class="skills__category-header">
+              <div class="skills__category-icon">
+                <i class="ri-code-line"></i>
+              </div>
+              <h3 class="skills__category-title">Frontend</h3>
+            </div>
+            <div class="skills__tags">
+              <span class="skills__tag skills__tag--primary">React.js</span>
+              <span class="skills__tag skills__tag--primary">TypeScript</span>
+              <span class="skills__tag">Redux Toolkit</span>
+              <span class="skills__tag">React Query</span>
+              <span class="skills__tag">Zustand</span>
+              <span class="skills__tag">TailwindCSS</span>
+              <span class="skills__tag">JavaScript (ES6+)</span>
+              <span class="skills__tag">HTML5</span>
+              <span class="skills__tag">CSS3/SCSS</span>
+            </div>
+          </div>
+
+          <!-- Backend Skills -->
+          <div class="skills__category" data-accent="green">
+            <div class="skills__category-header">
+              <div class="skills__category-icon">
+                <i class="ri-server-line"></i>
+              </div>
+              <h3 class="skills__category-title">Backend</h3>
+            </div>
+            <div class="skills__tags">
+              <span class="skills__tag skills__tag--primary">Node.js</span>
+              <span class="skills__tag skills__tag--primary">Express.js</span>
+              <span class="skills__tag">REST API</span>
+              <span class="skills__tag">JWT Auth</span>
+              <span class="skills__tag">Firebase Auth</span>
+              <span class="skills__tag">RBAC</span>
+            </div>
+          </div>
+
+          <!-- Database Skills -->
+          <div class="skills__category" data-accent="orange">
+            <div class="skills__category-header">
+              <div class="skills__category-icon">
+                <i class="ri-database-2-line"></i>
+              </div>
+              <h3 class="skills__category-title">Database</h3>
+            </div>
+            <div class="skills__tags">
+              <span class="skills__tag">MongoDB</span>
+              <span class="skills__tag">Mongoose</span>
+              <span class="skills__tag">Schema Design</span>
+              <span class="skills__tag">Aggregation Pipelines</span>
+            </div>
+          </div>
+
+          <!-- Real-Time & AI -->
+          <div class="skills__category" data-accent="purple">
+            <div class="skills__category-header">
+              <div class="skills__category-icon">
+                <i class="ri-robot-line"></i>
+              </div>
+              <h3 class="skills__category-title">Real-Time & AI</h3>
+            </div>
+            <div class="skills__tags">
+              <span class="skills__tag skills__tag--accent">WebSockets</span>
+              <span class="skills__tag skills__tag--accent">SIP.js</span>
+              <span class="skills__tag skills__tag--accent">WebRTC</span>
+              <span class="skills__tag skills__tag--accent">Azure AI Agent</span>
+              <span class="skills__tag skills__tag--accent">Azure Cognitive Search</span>
+              <span class="skills__tag skills__tag--accent">Azure OpenAI</span>
+            </div>
+          </div>
+
+          <!-- DevOps & Tools -->
+          <div class="skills__category" data-accent="cyan">
+            <div class="skills__category-header">
+              <div class="skills__category-icon">
+                <i class="ri-tools-line"></i>
+              </div>
+              <h3 class="skills__category-title">DevOps & Tools</h3>
+            </div>
+            <div class="skills__tags">
+              <span class="skills__tag">Docker</span>
+              <span class="skills__tag">Nginx</span>
+              <span class="skills__tag">Git</span>
+              <span class="skills__tag">GitHub</span>
+              <span class="skills__tag">CI/CD</span>
+              <span class="skills__tag">Jest</span>
+              <span class="skills__tag">React Testing Library</span>
+            </div>
+          </div>
+
+          <!-- Concepts -->
+          <div class="skills__category" data-accent="pink">
+            <div class="skills__category-header">
+              <div class="skills__category-icon">
+                <i class="ri-lightbulb-line"></i>
+              </div>
+              <h3 class="skills__category-title">Concepts</h3>
+            </div>
+            <div class="skills__tags">
+              <span class="skills__tag">Component Architecture</span>
+              <span class="skills__tag">Performance Optimization</span>
+              <span class="skills__tag">State Management</span>
+              <span class="skills__tag">Real-Time Communication</span>
+              <span class="skills__tag">Agile/Scrum</span>
+            </div>
+          </div>
+        </div>
+      </div>
    </section>
 
    <!--==================== PROJECTS ====================-->
    <section class="projects section" id="projects">
        <h3 class="section__subtitle">
-         <span>Jobs</span>
+         <span class="section__subtitle-icon"><i class="ri-folder-line"></i></span>
+         <span>Portfolio</span>
        </h3>
        <h2 class="section__title">
-         Recent Works
+         Featured Projects
        </h2>
        <div class="projects__container container grid">
+
+            <!-- Project 1: ATScore.in -->
             <article class="projects__card">
-                  <img src="assets/img/Mevolve.png" alt="" class="projects__img"/>
-                  <!-- <h3>In Progress.....</h3> -->
-                  <div class="projects__modal">
-                    <span class="projects__subtitle">Web</span>
-                    <h2 class="projects__title">Self-Development Site</h2>
-                    <a href="https://mevolve-b6eea.web.app/" target="_blank" class="projects__btn">
-                        View Demo <i class="ri-external-link-line"></i>
-                    </a>
-
-                  </div>
-            </article>
-
-            <article class="projects__card" style="text-align: center;
-            padding-block: 5rem;">
-              <!-- <img src="assets/img/Mevolve.png" alt="" class="projects__img"/> -->
-              <h3>Comming Soon.....</h3>
-              <!-- <div class="projects__modal">
-                <span class="projects__subtitle">Web</span>
-                <h2 class="projects__title">Self-Development Site</h2>
-                <a href="https://mevolve-b6eea.web.app/" target="_blank" class="projects__btn">
-                    View Demo <i class="ri-external-link-line"></i>
+              <div class="projects__card-glow"></div>
+              <div class="projects__card-header">
+                <div class="projects__icon-wrapper">
+                  <i class="ri-file-search-line projects__icon-large"></i>
+                </div>
+                <h3 class="projects__card-title">ATScore.in</h3>
+                <p class="projects__card-subtitle">ATS Resume Scoring Tool</p>
+              </div>
+              <ul class="projects__features">
+                <li>AI-powered resume analysis against job descriptions</li>
+                <li>Real-time ATS compatibility scoring</li>
+                <li>Keyword optimization suggestions</li>
+                <li>Detailed section-wise feedback</li>
+              </ul>
+              <div class="projects__card-footer">
+                <div class="projects__card-tags">
+                  <span>React.js</span>
+                  <span>TypeScript</span>
+                  <span>Node.js</span>
+                  <span>AI/NLP</span>
+                </div>
+                <a href="https://atscore.in" target="_blank" class="projects__link">
+                  <span>Visit Site</span>
+                  <i class="ri-arrow-right-up-line"></i>
                 </a>
-
-              </div> -->
+              </div>
             </article>
+
+            <!-- Project 2: Mevolve -->
+            <article class="projects__card projects__card--has-img">
+              <div class="projects__card-glow"></div>
+              <div class="projects__card-preview">
+                <img src="assets/img/Mevolve.png" alt="Mevolve Project" class="projects__img"/>
+              </div>
+              <div class="projects__card-body">
+                <h3 class="projects__card-title">Mevolve</h3>
+                <p class="projects__card-subtitle">Self-Development Platform</p>
+                <ul class="projects__features">
+                  <li>Personal growth tracking platform</li>
+                  <li>Goal setting and habit tracking</li>
+                  <li>Modern responsive design</li>
+                  <li>Interactive user experience</li>
+                </ul>
+                <a href="https://mevolve-b6eea.web.app/" target="_blank" class="projects__link">
+                  <span>View Live Demo</span>
+                  <i class="ri-arrow-right-up-line"></i>
+                </a>
+              </div>
+            </article>
+
        </div>
+   </section>
+
+   <!--==================== SERVICES ====================-->
+   <section class="services section" id="services">
+        <h3 class="section__subtitle">
+          <span class="section__subtitle-icon"><i class="ri-service-line"></i></span>
+          <span>Services</span>
+        </h3>
+        <h2 class="section__title">
+           What I Offer
+        </h2>
+        <div class="services__container container grid">
+            <article class="services__card">
+              <div class="services__icon-wrap">
+                <i class="ri-layout-3-line services__icon"></i>
+              </div>
+              <h2 class="services__title">Frontend Development</h2>
+              <p class="services__description">
+                Building scalable, performant web applications using React.js,
+                TypeScript, and modern state management solutions like Redux
+                Toolkit and Zustand.
+              </p>
+            </article>
+
+            <article class="services__card">
+              <div class="services__icon-wrap">
+                <i class="ri-robot-2-line services__icon"></i>
+              </div>
+              <h2 class="services__title">AI Integration</h2>
+              <p class="services__description">
+                Integrating AI-powered features using Azure AI Agent,
+                Cognitive Search, and OpenAI for intelligent automation,
+                chatbots, and knowledge retrieval systems.
+              </p>
+            </article>
+
+            <article class="services__card">
+              <div class="services__icon-wrap">
+                <i class="ri-video-chat-line services__icon"></i>
+              </div>
+              <h2 class="services__title">Real-Time Communication</h2>
+              <p class="services__description">
+                Developing multi-channel communication systems with WebSockets,
+                WebRTC, and SIP.js for chat, voice, and video capabilities
+                handling thousands of concurrent users.
+              </p>
+            </article>
+
+            <article class="services__card">
+              <div class="services__icon-wrap">
+                <i class="ri-server-line services__icon"></i>
+              </div>
+              <h2 class="services__title">Backend Development</h2>
+              <p class="services__description">
+                Building secure REST APIs using Node.js and Express.js
+                with JWT authentication, Firebase Auth, and role-based
+                access control (RBAC).
+              </p>
+            </article>
+
+            <article class="services__card">
+              <div class="services__icon-wrap">
+                <i class="ri-speed-line services__icon"></i>
+              </div>
+              <h2 class="services__title">Performance Optimization</h2>
+              <p class="services__description">
+                Optimizing application performance through memoization,
+                virtualization, lazy loading, and code splitting to
+                deliver smooth user experiences.
+              </p>
+            </article>
+
+            <article class="services__card">
+              <div class="services__icon-wrap">
+                <i class="ri-smartphone-line services__icon"></i>
+              </div>
+              <h2 class="services__title">Cross-Platform Solutions</h2>
+              <p class="services__description">
+                Creating responsive applications that work seamlessly
+                across web and mobile platforms with React and
+                React Native integration.
+              </p>
+            </article>
+        </div>
    </section>
 
    <!--==================== CONTACT ====================-->
    <section class="contact section" id="contact">
        <h3 class="section__subtitle">
-        Get In <span>Touch</span>
+         <span class="section__subtitle-icon"><i class="ri-chat-3-line"></i></span>
+         Get In <span>Touch</span>
        </h3>
        <h2 class="section__title">
            Contact Me
        </h2>
+
+       <div class="contact__info-container container">
+         <div class="contact__info-cards">
+           <div class="contact__info-card">
+             <div class="contact__info-icon-wrap">
+               <i class="ri-mail-line contact__info-icon"></i>
+             </div>
+             <h3 class="contact__info-title">Email</h3>
+             <a href="mailto:mmahendran.2205@gmail.com" class="contact__info-link">
+               mmahendran.2205@gmail.com
+             </a>
+           </div>
+           <div class="contact__info-card">
+             <div class="contact__info-icon-wrap">
+               <i class="ri-phone-line contact__info-icon"></i>
+             </div>
+             <h3 class="contact__info-title">Phone</h3>
+             <a href="tel:+919600419881" class="contact__info-link">
+               +91 9600419881
+             </a>
+           </div>
+           <div class="contact__info-card">
+             <div class="contact__info-icon-wrap">
+               <i class="ri-map-pin-line contact__info-icon"></i>
+             </div>
+             <h3 class="contact__info-title">Location</h3>
+             <span class="contact__info-text">Coimbatore, Tamil Nadu, India</span>
+           </div>
+         </div>
+       </div>
+
        <div class="contact__container container grid">
           <form action="" class="contact__form" id="contact-form" (submit)="sendEmail($event)">
             <div class="contact__group">
-                  <input type="text" name="user_name" class="contact__input" required placeholder="Enter your name">
-                  <input type="email" name="user_email" class="contact__input" required placeholder="Enter your email">
+                  <div class="contact__input-wrap">
+                    <i class="ri-user-line contact__input-icon"></i>
+                    <input type="text" name="user_name" class="contact__input" required placeholder="Your Name">
+                  </div>
+                  <div class="contact__input-wrap">
+                    <i class="ri-mail-line contact__input-icon"></i>
+                    <input type="email" name="user_email" class="contact__input" required placeholder="Your Email">
+                  </div>
             </div>
-            <textarea name="user_project" required class="contact__input" placeholder="Enter your message"></textarea>
+            <div class="contact__input-wrap">
+              <i class="ri-chat-1-line contact__input-icon"></i>
+              <input type="text" name="user_subject" class="contact__input" placeholder="Subject">
+            </div>
+            <div class="contact__input-wrap">
+              <i class="ri-message-2-line contact__input-icon contact__input-icon--top"></i>
+              <textarea name="user_project" required class="contact__input" placeholder="Your Message"></textarea>
+            </div>
             <p class="contact__message">{{contactmessage}}&nbsp;<span *ngIf="contactmessage == 'Message Sent Successfully'">&#9989;</span><span *ngIf="contactmessage == 'Message not sent'">&#10060;</span></p>
-            <button type="submit" class="btn contact__btn">
-              Send Message
+            <button type="submit" class="btn btn--primary contact__btn">
+              <i class="ri-send-plane-line"></i> Send Message
             </button>
           </form>
        </div>
@@ -297,31 +644,32 @@
             <h1 class="footer__title">
                   <span>Mahendran M</span>
             </h1>
-
             <h2 class="footer__education">
-                  Front-end Developer
+                  Frontend Engineer | {{experienceYears}} Years Experience
             </h2>
         </div>
         <div class="footer__social">
-              <a href="https://www.facebook.com/login/" target="_blank" class="footer__social-link">
-                <i class="ri-facebook-circle-line"></i>
+              <a href="https://github.com/MahendranJS" target="_blank" class="footer__social-link" title="GitHub">
+                <i class="ri-github-fill"></i>
               </a>
-              <a href="https://twitter.com/i/flow/login" target="_blank" class="footer__social-link">
-                <i class="ri-twitter-line"></i>
+              <a href="https://linkedin.com/in/Mahendran" target="_blank" class="footer__social-link" title="LinkedIn">
+                <i class="ri-linkedin-box-fill"></i>
               </a>
-              <a href="https://www.instagram.com/mahe_7_/" target="_blank" class="footer__social-link">
-                  <i class="ri-instagram-line"></i>
+              <a href="mailto:mmahendran.2205@gmail.com" class="footer__social-link" title="Email">
+                <i class="ri-mail-line"></i>
+              </a>
+              <a href="https://twitter.com/i/flow/login" target="_blank" class="footer__social-link" title="Twitter">
+                  <i class="ri-twitter-x-line"></i>
               </a>
         </div>
 
         <span class="footer__copy">
-           &#169; Copyright Mahendran. All rights reserved 
+           &copy; 2026 Mahendran M. All rights reserved.
         </span>
    </div>
 </footer>
 
-   <!--==================== Scroll Up ====================-->
-
-<a href="#" class="scrollup" id="scroll-up" >
+<!--==================== Scroll Up ====================-->
+<a href="#" class="scrollup" id="scroll-up">
   <i class="ri-arrow-up-line"></i>
 </a>
