@@ -30,7 +30,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npx ng build --configuration production --base-href /My-Portfolio/
+        run: npx ng build --configuration production --base-href /
 
       - name: Add .nojekyll
         run: touch dist/portfolio/.nojekyll
